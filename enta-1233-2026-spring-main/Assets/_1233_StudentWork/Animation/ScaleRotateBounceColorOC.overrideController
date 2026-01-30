@@ -9,5 +9,5 @@ AnimatorOverrideController:
   m_Name: ScaleRotateBounceColorOC
   m_Controller: {fileID: 9100000, guid: b83910da44ad8b549a19b8210ea4effa, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 7400000, guid: b57add52b8d5be240a1765e71708816d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c3fbd87dcd2f3a249b42ab065c119483, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: 26783eb243fc1244d8b4a7d776a15965, type: 2}
