@@ -101,6 +101,14 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    public void Testing(InputAction.CallbackContext context)
+    {
+        
+        print("Hello");
+        CameraMgr.Instance.ChangeRoomCamera();
+        
+    }
+
 
     private System.Collections.IEnumerator WaitForLanding()
     {
