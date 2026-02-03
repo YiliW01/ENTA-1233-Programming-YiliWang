@@ -103,10 +103,7 @@ public class PlayerController : MonoBehaviour
 
     public void Testing(InputAction.CallbackContext context)
     {
-        
-        print("Hello");
-        CameraMgr.Instance.ChangeRoomCamera();
-        
+        print("Testing 1, 2, 3...");
     }
 
 

@@ -1,0 +1,44 @@
+using System.Collections;
+using UnityEngine;
+
+public class GameStarter : MonoBehaviour
+{
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        StartCoroutine(StartWhenReady());
+    }
+
+    private IEnumerator StartWhenReady()
+    {
+        // TODO: Wait for level, player, enemies, etc.
+        // to be completely loaded
+        Debug.Log("GameStarter: Requesting level load");
+        LevelMgr.Instance.LoadCurrentLevel();
+
+        Debug.Log("GameStarter: Waiting for level to finish loading...");
+        yield return new WaitUntil(() => LevelMgr.Instance.IsLevelLoaded);
+
+        Debug.Log("GamerStarter: Spawning player");
+        PlayerSpawnPoint spawnPoint = PlayerSpawnPoint.Instance;
+        if (spawnPoint == null)
+            Debug.LogError("GameStarter: No spawn point found!");
+        else
+            PlayerMgr.Instance.SpawnPlayer(
+                spawnPoint.transform.position,
+                spawnPoint.transform.rotation);
+
+        Debug.Log("GameStarter: Waiting for player spawn...");
+        yield return new WaitUntil(() => PlayerMgr.Instance.HasSpawnedPlayer);
+
+
+        Debug.Log("Game starting in 3 seconds...");
+        yield return new WaitForSeconds(1f);
+        Debug.Log("Game starting in 2 seconds...");
+        yield return new WaitForSeconds(1f);
+        Debug.Log("Game starting in 1 second...");
+        yield return new WaitForSeconds(1f);
+
+        GameMgr.Instance.StartGame();
+    }
+}

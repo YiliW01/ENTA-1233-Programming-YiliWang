@@ -2812,7 +2812,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 891463982941930220, guid: e0d6ad42ec9824eeab85aa7c923765b7, type: 3}
       propertyPath: m_Name
-      value: Button
+      value: ButtonClose
       objectReference: {fileID: 0}
     - target: {fileID: 4888258718171414455, guid: e0d6ad42ec9824eeab85aa7c923765b7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

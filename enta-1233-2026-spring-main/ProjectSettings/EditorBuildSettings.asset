@@ -17,6 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/InstructorFiles/Scenes/GameOver.unity
     guid: 4d59908eab214f045899234d9ef5ca04
+  - enabled: 1
+    path: Assets/_1233_StudentWork/Scenes/Level_1.unity
+    guid: 18b6219dc5f6e05479e83be5db13972b
+  - enabled: 1
+    path: Assets/_1233_StudentWork/Scenes/Level_2.unity
+    guid: c17b342653c5a5742b3486a20f589e71
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: e35652714392b1442851c8d44a40fbc8, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2dfd1182a5078214e8c1886d06b12dd4, type: 3}

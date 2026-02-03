@@ -21,7 +21,6 @@ public class CollisionHandler : MonoBehaviour
     {
         if(collision.gameObject.tag == "Room")
         {
-            print("test");
             CameraMgr.Instance.ChangeRoomCamera();
         }
         

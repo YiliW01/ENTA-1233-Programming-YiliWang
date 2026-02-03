@@ -21,7 +21,7 @@ public class Settings : MenuBase
         return GameMenus.SettingsMenu;
     }
 
-    public void Close()
+    public void ButtonClose()
     {
         UIMgr.Instance.HideMenu(GameMenus.SettingsMenu);
     }
