@@ -45,4 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _willNotDestroyOnLoad: 0
-  _levelSceneNames: []
+  _levelSceneNames:
+  - Level_1
+  - Level_2

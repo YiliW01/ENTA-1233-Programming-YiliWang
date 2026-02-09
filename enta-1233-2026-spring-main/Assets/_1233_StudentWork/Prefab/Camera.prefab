@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 333963261854800240}
   serializedVersion: 2
   m_LocalRotation: {x: 0.300091, y: 0.00000001210812, z: -0.0000000038090953, w: 0.9539106}
-  m_LocalPosition: {x: 5.199999, y: 12.59, z: -1.67}
+  m_LocalPosition: {x: 0.30999947, y: 16.1, z: -24.8188}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -180,6 +180,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8376175920896026924}
   - component: {fileID: 7900754905203247981}
+  - component: {fileID: 4642787035316337131}
   m_Layer: 0
   m_Name: VirtualCamera1
   m_TagString: Untagged
@@ -245,6 +246,25 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &4642787035316337131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048718337336462942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b617507da6d07e749b7efdb34e1173e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TrackerSettings:
+    BindingMode: 4
+    PositionDamping: {x: 1, y: 1, z: 1}
+    AngularDampingMode: 0
+    RotationDamping: {x: 1, y: 1, z: 1}
+    QuaternionDamping: 1
+  FollowOffset: {x: 0, y: 15, z: -25}
 --- !u!1 &6814927007475950333
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,6 +275,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4054969079674475401}
   - component: {fileID: 1442997799751078061}
+  - component: {fileID: 8990631536027016972}
   m_Layer: 0
   m_Name: VirtualCamera4
   m_TagString: Untagged
@@ -320,6 +341,25 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &8990631536027016972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6814927007475950333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b617507da6d07e749b7efdb34e1173e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TrackerSettings:
+    BindingMode: 4
+    PositionDamping: {x: 1, y: 1, z: 1}
+    AngularDampingMode: 0
+    RotationDamping: {x: 1, y: 1, z: 1}
+    QuaternionDamping: 1
+  FollowOffset: {x: 0, y: 15, z: -25}
 --- !u!1 &7172017295095884519
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,9 +413,8 @@ MonoBehaviour:
   _mainCamera: {fileID: 8822934550691193693}
   _cam1: {fileID: 7900754905203247981}
   _cam2: {fileID: 1281189896213940762}
-  _cam3: {fileID: 104840784706105306}
-  _cam4: {fileID: 1442997799751078061}
-  Room: {fileID: 0}
+  camRoom1: {fileID: 0}
+  camRoom2: {fileID: 0}
 --- !u!1 &7178514949268816166
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,6 +425,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4557750328536853421}
   - component: {fileID: 104840784706105306}
+  - component: {fileID: 1867557029879355662}
   m_Layer: 0
   m_Name: VirtualCamera3
   m_TagString: Untagged
@@ -451,6 +491,25 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1867557029879355662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7178514949268816166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b617507da6d07e749b7efdb34e1173e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TrackerSettings:
+    BindingMode: 4
+    PositionDamping: {x: 1, y: 1, z: 1}
+    AngularDampingMode: 0
+    RotationDamping: {x: 1, y: 1, z: 1}
+    QuaternionDamping: 1
+  FollowOffset: {x: 0, y: 15, z: -25}
 --- !u!1 &7752748777427597048
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +520,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3098456177984290987}
   - component: {fileID: 1281189896213940762}
+  - component: {fileID: 33201002006362498}
   m_Layer: 0
   m_Name: VirtualCamera2
   m_TagString: Untagged
@@ -526,3 +586,22 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &33201002006362498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7752748777427597048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b617507da6d07e749b7efdb34e1173e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TrackerSettings:
+    BindingMode: 4
+    PositionDamping: {x: 1, y: 1, z: 1}
+    AngularDampingMode: 0
+    RotationDamping: {x: 1, y: 1, z: 1}
+    QuaternionDamping: 1
+  FollowOffset: {x: 0, y: 15, z: -25}
