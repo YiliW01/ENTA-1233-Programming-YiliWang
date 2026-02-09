@@ -3,29 +3,26 @@ using UnityEngine;
 public class CollisionHandler : MonoBehaviour
 {
 
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    //[SerializeField]
+    //public BoxCollider _room1;
+    //public BoxCollider _room2;
+    //public BoxCollider _room3;
+    //public BoxCollider _room4;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //public int _roomNumber;
 
+    public bool inRoom;
 
-    private void OnTriggerExit(Collider collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.gameObject.tag == "Room")
-        {
-            CameraMgr.Instance.ChangeRoomCamera();
-        }
+        inRoom = true;
         
 
     }
 
-
+    private void OnTriggerExit(Collider other)
+    {
+        inRoom = false;
+        CameraMgr.Instance.ChangeRoomCamera();
+    }
 }

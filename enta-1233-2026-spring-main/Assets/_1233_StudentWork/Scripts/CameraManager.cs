@@ -3,7 +3,7 @@ using Unity.Cinemachine;
 
 public class CameraManager : Singleton<CameraManager>
 {
-    private int number = 87348;
+    //private int number = 87348;
 
     [SerializeField]
     private CinemachineCamera camera1;

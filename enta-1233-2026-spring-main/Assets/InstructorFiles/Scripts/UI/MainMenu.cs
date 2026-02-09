@@ -15,10 +15,10 @@ public class MainMenu : MenuBase
         return GameMenus.MainMenu;
     }
 
-    private void OnEnable()
-    {
-        _startButton.Select();
-    }
+    //private void OnEnable()
+    //{
+        //_startButton.Select();
+   // }
 
     public void ButtonStart()
     {

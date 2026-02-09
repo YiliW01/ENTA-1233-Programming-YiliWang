@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Animator _animator;
 
+    private bool isJumping;
+
     private static readonly int Speed =
         Animator.StringToHash("Speed");
         
@@ -93,17 +95,24 @@ public class PlayerController : MonoBehaviour
         if (!IsGrounded() && _numberOfJumps >= maxNumberOfJumps) return;
         if (_numberOfJumps == 0) StartCoroutine(WaitForLanding());
 
+        if (isJumping == true)
+        {
+            _animator.SetBool("IsJump2", true);
+        }
+
         _numberOfJumps++;
         _velocity = jumpPower;
         //_velocity = jumpPower / _numberOfJumps;
 
         _animator.SetBool("IsJumping", true);
-        
+        isJumping = true;
+
     }
 
     public void Testing(InputAction.CallbackContext context)
     {
         print("Testing 1, 2, 3...");
+        CameraMgr.Instance.ChangeRoomCamera();
     }
 
 
@@ -113,7 +122,10 @@ public class PlayerController : MonoBehaviour
         yield return new WaitUntil(IsGrounded);
         
         _numberOfJumps = 0;
+
         _animator.SetBool("IsJumping", false);
+        isJumping = false;
+        _animator.SetBool("IsJump2", false);
         _animator.SetBool("IsLanded", true);
     }
 

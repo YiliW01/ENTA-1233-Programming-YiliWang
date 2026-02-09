@@ -4,6 +4,7 @@ public class PlayerAudioHandler : MonoBehaviour
 {
     [SerializeField] private AudioSource _footstepSource;
     [SerializeField] private AudioSource _landingSource;
+    [SerializeField] private AudioSource _jumpingSource;
 
     public void PlayFootstep()
     {
@@ -13,5 +14,10 @@ public class PlayerAudioHandler : MonoBehaviour
     public void PlayLanding()
     {
         _landingSource?.Play();
+    }
+
+    public void PlayJumping()
+    {
+        _jumpingSource?.Play();
     }
 }
