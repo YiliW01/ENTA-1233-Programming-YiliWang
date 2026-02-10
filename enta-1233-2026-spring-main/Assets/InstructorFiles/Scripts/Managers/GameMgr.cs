@@ -74,6 +74,9 @@ public class GameMgr : Singleton<GameMgr>
 
     public void NextLevel()
     {
+        IsGameRunning = false;
+        SceneMgr.Instance.LoadScene(GameScenes.GameOver, GameMenus.LevelCompleteMenu);
+
         throw new NotImplementedException("No next level logic");
     }
 

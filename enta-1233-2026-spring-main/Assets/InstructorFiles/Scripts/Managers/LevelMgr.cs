@@ -14,6 +14,10 @@ public class LevelMgr : Singleton<LevelMgr>
     private int _currentLevelIndex;
     public bool IsLevelLoaded { get; private set; }
 
+    public void LevelComplete()
+    {
+        _currentLevelIndex++;
+    }
     public void LoadCurrentLevel()
     {
         IsLevelLoaded = false;

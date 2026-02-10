@@ -6,6 +6,7 @@ public class LevelCompleteTrigger : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
+            LevelMgr.Instance.LevelComplete();
             GameMgr.Instance.NextLevel();
         }
     }
