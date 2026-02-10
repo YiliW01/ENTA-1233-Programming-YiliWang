@@ -1037,9 +1037,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5209461613275161041, guid: 9c30d0a9f556a6c4caac095c3ca3860a, type: 3}
+      propertyPath: camRoom1
+      value: 
+      objectReference: {fileID: 153355571}
+    - target: {fileID: 5209461613275161041, guid: 9c30d0a9f556a6c4caac095c3ca3860a, type: 3}
+      propertyPath: camRoom2
+      value: 
+      objectReference: {fileID: 1763132220}
     - target: {fileID: 7172017295095884519, guid: 9c30d0a9f556a6c4caac095c3ca3860a, type: 3}
       propertyPath: m_Name
       value: Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 7562084189451105593, guid: 9c30d0a9f556a6c4caac095c3ca3860a, type: 3}
+      propertyPath: DefaultBlend.Time
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7819806615028812987, guid: 9c30d0a9f556a6c4caac095c3ca3860a, type: 3}
       propertyPath: m_LocalPosition.x

@@ -23,6 +23,6 @@ public class CollisionHandler : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         inRoom = false;
-        CameraMgr.Instance.ChangeRoomCamera();
+        CameraManager.Instance.ChangeRoomCamera();
     }
 }

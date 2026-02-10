@@ -6,23 +6,35 @@ public class CameraManager : Singleton<CameraManager>
     //private int number = 87348;
 
     [SerializeField]
-    private CinemachineCamera camera1;
+    private CinemachineCamera _cam1;
+    [SerializeField]
+    private CinemachineCamera _cam2;
+    //[SerializeField]
+    //private CinemachineCamera _cam3;
+    //[SerializeField]
+    //private CinemachineCamera _cam4;
 
-    [SerializeField] private CinemachineCamera camera2;
+    public CollisionHandler camRoom1;
+    public CollisionHandler camRoom2;
+    //public CollisionHandler roomCam3;
+    //public CollisionHandler roomCam4;
 
-    public void ChangeCamera()
+    public void ChangeRoomCamera()
     {
-        if(camera1.Priority<camera2.Priority)
+        _cam1.Priority = 10;
+        _cam2.Priority = 10;
+        //_cam3.Priority = 10;
+        //_cam4.Priority = 10;
+
+        if (camRoom1.inRoom == true)
         {
-            camera1.Priority = 2;
-            camera2.Priority = 1;
+            _cam1.Priority = 20;
         }
 
-
-    }
-
-    private void Adding(int number1, int number2)
-    {
+        if (camRoom2.inRoom == true)
+        {
+            _cam2.Priority = 20;
+        }
 
     }
 }
