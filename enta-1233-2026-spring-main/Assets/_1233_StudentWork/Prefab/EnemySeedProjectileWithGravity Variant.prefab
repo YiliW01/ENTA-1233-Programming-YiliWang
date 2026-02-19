@@ -118,6 +118,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4088435186887473616, guid: 76c449a8506ac5c41a8c8ef48d62b6be, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4088435186887473616, guid: 76c449a8506ac5c41a8c8ef48d62b6be, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6820968736762670289, guid: 76c449a8506ac5c41a8c8ef48d62b6be, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -140,10 +148,39 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4664615346117677690, guid: 76c449a8506ac5c41a8c8ef48d62b6be, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6406956131319547204}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8505253403523366620, guid: 76c449a8506ac5c41a8c8ef48d62b6be, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1975626642340404688}
   m_SourcePrefab: {fileID: 100100000, guid: 76c449a8506ac5c41a8c8ef48d62b6be, type: 3}
 --- !u!4 &286059741694681932 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4664615346117677690, guid: 76c449a8506ac5c41a8c8ef48d62b6be, type: 3}
   m_PrefabInstance: {fileID: 4847072906484543798}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3840719222965489642 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8505253403523366620, guid: 76c449a8506ac5c41a8c8ef48d62b6be, type: 3}
+  m_PrefabInstance: {fileID: 4847072906484543798}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &1975626642340404688
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3840719222965489642}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0, z: 0}

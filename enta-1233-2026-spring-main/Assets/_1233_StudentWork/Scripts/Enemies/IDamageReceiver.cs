@@ -6,6 +6,5 @@ using UnityEngine;
 /// </summary>
 public interface IDamageReceiver
 {
-
     void ApplyDamage(DamageInfo info);
 }
