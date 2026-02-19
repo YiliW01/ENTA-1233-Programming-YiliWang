@@ -6,7 +6,7 @@ using UnityEngine;
 public class SpikeBrain : MonoBehaviour
 {
     [SerializeField] private Health _health;
-    //[SerializeField] private PatrolMotor _patrolMotor;
+    [SerializeField] private PatrolMotor _patrolMotor;
     [SerializeField] private ContactDamage _contactDamage;
     [SerializeField] private EnemyAnimatorDriver _animatiorDriver;
 
@@ -15,7 +15,7 @@ public class SpikeBrain : MonoBehaviour
     private void Awake()
     {
         if (_health == null) _health = GetComponent<Health>();
-        //if (_patrolMotor == null) _patrolMotor = GetComponent<PatrolMotor>();
+        if (_patrolMotor == null) _patrolMotor = GetComponent<PatrolMotor>();
         if (_contactDamage == null) _contactDamage = GetComponent<ContactDamage>();
         if (_animatiorDriver == null) _animatiorDriver = GetComponent<EnemyAnimatorDriver>();
         _mover = GetComponent<IMover>();
@@ -41,7 +41,7 @@ public class SpikeBrain : MonoBehaviour
 
     private void HandleDied()
     {
-        //if (_patrolMotor != null) _patrolMotor.enabled = false;
+        if (_patrolMotor != null) _patrolMotor.enabled = false;
         if (_contactDamage != null) _contactDamage.enabled = false;
         if (_mover != null)
         {

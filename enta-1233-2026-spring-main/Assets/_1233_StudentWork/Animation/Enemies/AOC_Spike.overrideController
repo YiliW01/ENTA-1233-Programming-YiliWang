@@ -7,5 +7,11 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: AOC_Spike
-  m_Controller: {fileID: 0}
-  m_Clips: []
+  m_Controller: {fileID: 9100000, guid: 51c1f3368474cae4888c3f78cd9733a0, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 9d4e5e5349109054387d255b01a3ef68, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 814757d466beeb741bbfbd29a91a9e4f, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: e79503ce3b4442d4482b927dbb905869, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 25f563d4e6b57de4e8fa9ae08b07785c, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: acbfd90775ef54048bfdefd0926381fa, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6fada02ef71162149b340e49fa800a51, type: 3}
