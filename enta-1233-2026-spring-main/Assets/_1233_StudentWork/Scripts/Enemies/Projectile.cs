@@ -30,7 +30,35 @@ public class Projectile : MonoBehaviour
         var damageReceiver = collision.gameObject.GetComponent<IDamageReceiver>();
         if (damageReceiver != null)
         {
-
+            var info = new DamageInfo
+            {
+                Amount = _damage,
+                Source = _source,
+                HitPoint = collision.contacts[0].point,
+                HitNormal = collision.contacts[0].normal
+            };
+            damageReceiver.ApplyDamage(info);
         }
+
+        // Destroy on impact
+        Destroy(gameObject);
+    }
+
+    public void Launch(Vector3 direction, GameObject source)
+    {
+        _source = source;
+        _rb.linearVelocity = direction.normalized * _speed;
+        transform.forward = direction;
+        Destroy(gameObject, _lifetime); // Simple destruction for now
+    }
+
+    public void LaunchWithVelocity(Vector3 velocity, GameObject source)
+    {
+        _source = source;
+        _rb.linearVelocity = velocity;
+        if (velocity.sqrMagnitude > 0.001f)
+            transform.forward = velocity;
+        _rb.useGravity = true; // Force gravity for arc shots
+        Destroy(gameObject, _lifetime);
     }
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 /// <summary>
 /// Simple implementation of ITargetProvider that returns the player transform.
 /// </summary>
-public class PlayerTargetProvider : MonoBehaviour
+public class PlayerTargetProvider : MonoBehaviour, ITargetProvider
 {
     [SerializeField] private Vector3 _offset = new(0, 1f, 0);
 

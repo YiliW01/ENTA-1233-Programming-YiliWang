@@ -5,12 +5,11 @@ using UnityEngine;
 /// Used for stationary enemies like Bud or Training Dummy.
 /// Keeps the architecture consistent.
 /// </summary>
-public class StationaryMover : MonoBehaviour
+public class StationaryMover : MonoBehaviour, IMover
 {
     public Vector3 Velocity => Vector3.zero;
     public float RemainingDistance => 0f;
     public bool IsAtDestination => true;
-
 
     public void SetDestination(Vector3 destination)
     {
