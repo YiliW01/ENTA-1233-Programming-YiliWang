@@ -31,7 +31,7 @@ public class ContactDamage : MonoBehaviour
     {
         if (Time.time < _nextDamageTime) return;
 
-        var damageReceiver = target.GetComponent<IDamageReceiver>();
+        var damageReceiver = target.GetComponentInChildren<IDamageReceiver>();
         if (damageReceiver != null)
         {
             var info = new DamageInfo

@@ -840,6 +840,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyBudFixedAxis
       objectReference: {fileID: 0}
+    - target: {fileID: 537142735206609982, guid: ede39df2d47b3d343a1aaa220446b1c3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 742302710964405476, guid: ede39df2d47b3d343a1aaa220446b1c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.39
@@ -1134,6 +1138,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f32f68d665078c04786f43d79d1f8bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1359732972 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1996815194331324038, guid: edaa3f2c5c40deb46a93c5a32672765a, type: 3}
+  m_PrefabInstance: {fileID: 1063433985364512963}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &1359732978
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359732972}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0.45, z: 0}
 --- !u!1 &1409511618
 GameObject:
   m_ObjectHideFlags: 0
@@ -1749,6 +1779,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 706035857731106469, guid: 2ce225367690447499c9c54875aa0d16, type: 3}
+      propertyPath: _health
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 706035857731106469, guid: 2ce225367690447499c9c54875aa0d16, type: 3}
+      propertyPath: _stateMachine
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4724769785511945389, guid: 2ce225367690447499c9c54875aa0d16, type: 3}
       propertyPath: m_Name
       value: EnemySnake Variant
@@ -1910,9 +1948,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 80951338284816469, guid: cb2d7d832ab480249a2013cc9fcd3898, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7466912865782426910, guid: cb2d7d832ab480249a2013cc9fcd3898, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.18
+      value: -0.37
       objectReference: {fileID: 0}
     - target: {fileID: 7466912865782426910, guid: cb2d7d832ab480249a2013cc9fcd3898, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1920,7 +1962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7466912865782426910, guid: cb2d7d832ab480249a2013cc9fcd3898, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.44
+      value: -3.41
       objectReference: {fileID: 0}
     - target: {fileID: 7466912865782426910, guid: cb2d7d832ab480249a2013cc9fcd3898, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1978,6 +2020,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5483210925358689650, guid: edaa3f2c5c40deb46a93c5a32672765a, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483210925358689650, guid: edaa3f2c5c40deb46a93c5a32672765a, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8079041902616696166, guid: edaa3f2c5c40deb46a93c5a32672765a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.77
@@ -2018,6 +2068,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8102658538043879258, guid: edaa3f2c5c40deb46a93c5a32672765a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9018429492385473980, guid: edaa3f2c5c40deb46a93c5a32672765a, type: 3}
       propertyPath: m_Name
       value: EnemySpike
@@ -2025,7 +2079,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1996815194331324038, guid: edaa3f2c5c40deb46a93c5a32672765a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1359732978}
   m_SourcePrefab: {fileID: 100100000, guid: edaa3f2c5c40deb46a93c5a32672765a, type: 3}
 --- !u!1001 &1213026216777268165
 PrefabInstance:
@@ -2096,6 +2153,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3591906584268830739, guid: 1fe5d60f045cd4c41993a60c38aca88b, type: 3}
+      propertyPath: _obstructionMask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 8137607424623442686, guid: 1fe5d60f045cd4c41993a60c38aca88b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.65
@@ -2140,6 +2201,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyBloom
       objectReference: {fileID: 0}
+    - target: {fileID: 9067987744814189092, guid: 1fe5d60f045cd4c41993a60c38aca88b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2156,6 +2221,10 @@ PrefabInstance:
     - target: {fileID: 7075049454577735984, guid: b06f9f52bda427d458439208032c16b0, type: 3}
       propertyPath: m_Name
       value: EnemyBud Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7075049454577735984, guid: b06f9f52bda427d458439208032c16b0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8004866756828031466, guid: b06f9f52bda427d458439208032c16b0, type: 3}
       propertyPath: m_LocalPosition.x
