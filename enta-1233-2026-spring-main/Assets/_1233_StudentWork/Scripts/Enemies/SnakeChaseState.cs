@@ -3,7 +3,6 @@ using UnityEngine;
 public class SnakeChaseState : EnemyState
 {
     private readonly SnakeBrain _brain;
-
     public SnakeChaseState(SnakeBrain brain, EnemyStateMachine machine) : base(machine)
     {
         _brain = brain;

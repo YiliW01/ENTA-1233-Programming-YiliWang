@@ -11,14 +11,8 @@ public class EnemyStateMachine : MonoBehaviour
     private void Update()
     {
         _currentState?.Tick();
-        WaitForTock();
     }
 
-    private IEnumerator WaitForTock()
-    {
-        yield return new WaitForSeconds(2f);
-        _currentState?.Tock();
-    }
     public void Initialize(EnemyState initialState)
     {
         _currentState = initialState;
