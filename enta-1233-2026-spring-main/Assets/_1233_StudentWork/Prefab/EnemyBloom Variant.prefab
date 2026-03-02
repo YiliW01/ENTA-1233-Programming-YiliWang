@@ -55,12 +55,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7602502353609727204}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.70976967, y: -0.00004735588, z: -0.7044335, w: 0.00065362436}
+  m_LocalPosition: {x: 0.32784367, y: 1.0497792, z: 0.18566751}
+  m_LocalScale: {x: 1, y: 1, z: 1.0000105}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6430295099868069685}
+  m_Father: {fileID: 8137607424623442686}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4207262227879877470
 PrefabInstance:
@@ -121,19 +121,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 7160668322233640043, guid: a87f651b28f3d234db143fa6b87bea0c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1761641132749190989}
     - targetCorrespondingSourceObject: {fileID: 7160668322233640039, guid: a87f651b28f3d234db143fa6b87bea0c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4296357349866421752}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a87f651b28f3d234db143fa6b87bea0c, type: 3}
---- !u!4 &6430295099868069685 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7160668322233640043, guid: a87f651b28f3d234db143fa6b87bea0c, type: 3}
-  m_PrefabInstance: {fileID: 4207262227879877470}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6430295099868069689 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7160668322233640039, guid: a87f651b28f3d234db143fa6b87bea0c, type: 3}
@@ -203,6 +195,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1884375817998824850, guid: 927e8135f3317084eae744d5ecd85434, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1761641132749190989}
     - targetCorrespondingSourceObject: {fileID: 3319793308593240247, guid: 927e8135f3317084eae744d5ecd85434, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6430295099868069715}
@@ -284,6 +279,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3319793308593240247, guid: 927e8135f3317084eae744d5ecd85434, type: 3}
   m_PrefabInstance: {fileID: 7694456059618201452}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &8137607424623442686 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1884375817998824850, guid: 927e8135f3317084eae744d5ecd85434, type: 3}
+  m_PrefabInstance: {fileID: 7694456059618201452}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &9067987744814189092 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1666267865643992392, guid: 927e8135f3317084eae744d5ecd85434, type: 3}
@@ -306,7 +306,7 @@ MonoBehaviour:
   _fieldOfView: 120
   _obstructionMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
 --- !u!114 &8619668854481685309
 MonoBehaviour:
   m_ObjectHideFlags: 0

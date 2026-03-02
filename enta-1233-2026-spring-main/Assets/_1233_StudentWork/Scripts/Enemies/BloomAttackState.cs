@@ -27,14 +27,20 @@ public class BloomAttackState : EnemyState
             return;
         }
 
-        var distance = Vector3.Distance(_brain.transform.position, target.position);
+        var distance = Vector3.Distance(_brain.transform.position, targetPos);
         var hasLOS = _brain.Detection.HasLineOfSight(target);
+        if (hasLOS == true) Debug.Log("Has LOS");
 
         // 2. If LOS is lost or we are out of range, go back to Move state
-        if (!hasLOS || distance > _brain.AttackRange)
+        if (hasLOS == false || distance > _brain.AttackRange)
         {
             Machine.ChangeState(new BloomMoveState(_brain, Machine));
             return;
+        }
+
+        //if (hasLOS == false)
+        {
+            //Debug.Log("NOPE");
         }
 
         // 3. Face the player and shoot if weapon is ready
@@ -46,11 +52,11 @@ public class BloomAttackState : EnemyState
         }
 
         // 4. Optional; If player gets too close, back away (Kite)
-        if (distance < _brain.StopRange - 1f)
+        //if (distance < _brain.StopRange - 1f)
         {
             // Simple kite logic: move away from target
-            var kiteDir = (_brain.transform.position - target.position).normalized;
-            _brain.Mover?.SetDestination(_brain.transform.position + kiteDir * 2f);
+            //var kiteDir = (_brain.transform.position - target.position).normalized;
+            //_brain.Mover?.SetDestination(_brain.transform.position + kiteDir * 2f);
         }
     }
 }

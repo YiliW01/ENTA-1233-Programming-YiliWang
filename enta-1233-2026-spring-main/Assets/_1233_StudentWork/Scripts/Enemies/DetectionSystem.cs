@@ -39,21 +39,32 @@ public class DetectionSystem : MonoBehaviour
 
     public bool HasLineOfSight(Transform target)
     {
-        if (target == null) return false;
+        if (target == null)
+        { 
+            Debug.Log("No target"); 
+            return false; 
+        }
 
         var directionToTarget = (target.position - _eyePosition.position).normalized;
         var distanceToTarget = Vector3.Distance(_eyePosition.position, target.position);
 
         // Check if target is within FOV
-        if (Vector3.Angle(transform.forward, directionToTarget) > _fieldOfView / 2f) return false;
+        if (Vector3.Angle(transform.forward, directionToTarget) > _fieldOfView / 2f)
+        {
+            Debug.Log("Not in FOV");
+            return false;
+        }
 
         // Raycast to check for obstructions
         if (Physics.Raycast(_eyePosition.position, directionToTarget,
-            out var hit, distanceToTarget, _obstructionMask))
+                out var hit, distanceToTarget, _obstructionMask))
             // If we hit something other than the target
             // (or a child of the target), then LOS is blocked
             if (hit.transform != target && !hit.transform.IsChildOf(target))
+            {
+                Debug.Log("Not hitting target");
                 return false;
+            }
 
         return true;
     }
