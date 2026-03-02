@@ -11,7 +11,7 @@ public class GameStarter : MonoBehaviour
 
     private IEnumerator StartWhenReady()
     {
-        // TODO: Wait for level, player, enemies, etc.
+        // TODO: Wait for enemies, etc.
         // to be completely loaded
         Debug.Log("GameStarter: Requesting level load");
         LevelMgr.Instance.LoadCurrentLevel();
@@ -19,6 +19,8 @@ public class GameStarter : MonoBehaviour
         Debug.Log("GameStarter: Waiting for level to finish loading...");
         yield return new WaitUntil(() => LevelMgr.Instance.IsLevelLoaded);
 
+        //Debug.Log("GameStarter: Spawning Enemies");
+        
         Debug.Log("GamerStarter: Spawning player");
         PlayerSpawnPoint spawnPoint = PlayerSpawnPoint.Instance;
         if (spawnPoint == null)

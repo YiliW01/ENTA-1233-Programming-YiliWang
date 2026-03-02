@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2048718337336462942}
   serializedVersion: 2
   m_LocalRotation: {x: 0.300091, y: 0.00000001210812, z: -0.0000000038090953, w: 0.9539106}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 4.7718525, y: 17.125498, z: -8.028799}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Priority:
     Enabled: 1
-    m_Value: 11
+    m_Value: 20
   OutputChannel: 1
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
@@ -94,7 +94,7 @@ MonoBehaviour:
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
-  FollowOffset: {x: 0, y: 15, z: -25}
+  FollowOffset: {x: 0, y: 19.4, z: -30.3}
 --- !u!1 &6814927007475950333
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,10 +239,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _willNotDestroyOnLoad: 0
-  _cam1: {fileID: 7900754905203247981}
-  _cam2: {fileID: 1281189896213940762}
-  camRoom1: {fileID: 0}
-  camRoom2: {fileID: 0}
+  _cam:
+  - {fileID: 7900754905203247981}
+  - {fileID: 1281189896213940762}
+  _camRoom:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &7178514949268816166
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,7 +367,7 @@ Transform:
   m_GameObject: {fileID: 7752748777427597048}
   serializedVersion: 2
   m_LocalRotation: {x: 0.30008984, y: -4.8712706e-17, z: 1.5484559e-16, w: 0.95391095}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 24.711853, y: 14.625498, z: -0.028800964}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -432,4 +434,4 @@ MonoBehaviour:
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
-  FollowOffset: {x: 0, y: 15, z: -25}
+  FollowOffset: {x: 0, y: 16.9, z: -29.2}

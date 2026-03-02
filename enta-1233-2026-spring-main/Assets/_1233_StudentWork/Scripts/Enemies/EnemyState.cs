@@ -22,6 +22,11 @@ public abstract class EnemyState
 
     }
 
+    public virtual void Tock()
+    {
+
+    }
+
     public virtual void Exit()
     {
 

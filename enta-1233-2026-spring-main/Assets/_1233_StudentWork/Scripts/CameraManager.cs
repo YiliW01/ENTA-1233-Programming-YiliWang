@@ -3,37 +3,26 @@ using Unity.Cinemachine;
 
 public class CameraManager : Singleton<CameraManager>
 {
-    //private int number = 87348;
+    [SerializeField] private CinemachineCamera[] _cam;
+    
+    public CollisionHandler[] _camRoom;
 
-    [SerializeField]
-    private CinemachineCamera _cam1;
-    [SerializeField]
-    private CinemachineCamera _cam2;
-    //[SerializeField]
-    //private CinemachineCamera _cam3;
-    //[SerializeField]
-    //private CinemachineCamera _cam4;
-
-    public CollisionHandler camRoom1;
-    public CollisionHandler camRoom2;
-    //public CollisionHandler roomCam3;
-    //public CollisionHandler roomCam4;
+    //idk what this was for i lost the thought
+    //private int roomNumber = 0;
 
     public void ChangeRoomCamera()
     {
-        _cam1.Priority = 10;
-        _cam2.Priority = 10;
-        //_cam3.Priority = 10;
-        //_cam4.Priority = 10;
+        _cam[0].Priority = 10;
+        _cam[1].Priority = 10;
 
-        if (camRoom1.inRoom == true)
+        if (_camRoom[0].inRoom == true)
         {
-            _cam1.Priority = 20;
+            _cam[0].Priority = 20;
         }
 
-        if (camRoom2.inRoom == true)
+        if (_camRoom[1].inRoom == true)
         {
-            _cam2.Priority = 20;
+            _cam[1].Priority = 20;
         }
 
     }

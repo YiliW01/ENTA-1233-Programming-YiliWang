@@ -2,13 +2,15 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
-public sealed class NavMeshAgentMover : MonoBehaviour
+public sealed class NavMeshAgentMover : MonoBehaviour, IMover
 {
     [SerializeField] private NavMeshAgent _agent;
 
     //public getters for agent related information
     public Vector3 Velocity => _agent.velocity;
     public bool HasPath => _agent.hasPath;
+    public float RemainingDistance => _agent.remainingDistance;
+    public bool IsAtDestination => _agent.pathPending;
 
     public void SetDestination(Vector3 worldPos)
     {
@@ -21,4 +23,13 @@ public sealed class NavMeshAgentMover : MonoBehaviour
         _agent.ResetPath();
     }
 
+    public void Resume()
+    {
+
+    }
+
+    public void SetEnabled(bool value)
+    {
+
+    }
 }
