@@ -20,16 +20,17 @@ public sealed class NavMeshAgentMover : MonoBehaviour, IMover
 
     public void Stop()
     {
+        _agent.isStopped = true;
         _agent.ResetPath();
     }
 
     public void Resume()
     {
-
+        _agent.isStopped = false;
     }
 
     public void SetEnabled(bool value)
     {
-
+        _agent.enabled = value;
     }
 }
