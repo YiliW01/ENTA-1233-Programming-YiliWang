@@ -37,21 +37,20 @@ public class DetectionSystem : MonoBehaviour
         return Vector3.Distance(transform.position, target.position) <= _detectionRange;
     }
 
-    public bool HasLineOfSight(Transform target)
+    public bool HasLineOfSight(Transform target, Vector3 offset)
     {
         if (target == null)
         { 
-            Debug.Log("No target"); 
             return false; 
         }
 
-        var directionToTarget = (target.position - _eyePosition.position).normalized;
-        var distanceToTarget = Vector3.Distance(_eyePosition.position, target.position);
+        Vector3 targetWithOffset = target.position + offset;
+        var directionToTarget = (targetWithOffset - _eyePosition.position).normalized;
+        var distanceToTarget = Vector3.Distance(_eyePosition.position, targetWithOffset);
 
         // Check if target is within FOV
         if (Vector3.Angle(transform.forward, directionToTarget) > _fieldOfView / 2f)
         {
-            Debug.Log("Not in FOV");
             return false;
         }
 

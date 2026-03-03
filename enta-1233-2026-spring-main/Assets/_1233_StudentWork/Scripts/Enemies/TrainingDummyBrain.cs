@@ -50,10 +50,12 @@ public class TrainingDummyBrain : MonoBehaviour
     {
         Debug.Log("[Dummy] Died! Resetting...");
         if (_autoReset) Invoke(nameof(ResetDummy), _resetDelay);
+        _animatorDriver?.TriggerDie();
     }
 
     private void ResetDummy()
     {
+        Debug.Log("[Dummy] Reset!");
         _health.ResetHealth();
     }
 }

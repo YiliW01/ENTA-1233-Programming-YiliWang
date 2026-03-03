@@ -299,6 +299,14 @@ PrefabInstance:
       propertyPath: camRoom2
       value: 
       objectReference: {fileID: 2003394080}
+    - target: {fileID: 5209461613275161041, guid: 9c30d0a9f556a6c4caac095c3ca3860a, type: 3}
+      propertyPath: '_camRoom.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1998723609}
+    - target: {fileID: 5209461613275161041, guid: 9c30d0a9f556a6c4caac095c3ca3860a, type: 3}
+      propertyPath: '_camRoom.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2003394080}
     - target: {fileID: 7172017295095884519, guid: 9c30d0a9f556a6c4caac095c3ca3860a, type: 3}
       propertyPath: m_Name
       value: Camera

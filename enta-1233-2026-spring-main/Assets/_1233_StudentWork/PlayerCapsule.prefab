@@ -118,7 +118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7332983691552296169}
   m_Layer: 0
-  m_Name: Player
+  m_Name: PlayerCapsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -270,6 +270,7 @@ MonoBehaviour:
   gravityMultiplier: 1
   jumpPower: 3
   maxNumberOfJumps: 2
+  _animator: {fileID: 0}
 --- !u!143 &2254461804357434881
 CharacterController:
   m_ObjectHideFlags: 0

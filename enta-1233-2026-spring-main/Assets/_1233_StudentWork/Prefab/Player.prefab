@@ -287,7 +287,7 @@ Transform:
   m_GameObject: {fileID: 4062267131959034551}
   serializedVersion: 2
   m_LocalRotation: {x: 0.30008984, y: -4.8712706e-17, z: 1.5484559e-16, w: 0.95391095}
-  m_LocalPosition: {x: 4.3999996, y: 14.690001, z: -19.9488}
+  m_LocalPosition: {x: -1.0509918, y: 20.560513, z: -19.828096}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -440,7 +440,6 @@ GameObject:
   - component: {fileID: 8551222278247136458}
   - component: {fileID: 4078483030219045029}
   - component: {fileID: 1786272054084916935}
-  - component: {fileID: 8622905515404339745}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -509,7 +508,7 @@ MonoBehaviour:
   speed: 5
   gravityMultiplier: 1
   jumpPower: 4
-  maxNumberOfJumps: 2
+  maxNumberOfJumps: 1
   _animator: {fileID: 988522408634787882}
 --- !u!114 &1786272054084916935
 MonoBehaviour:
@@ -589,19 +588,6 @@ MonoBehaviour:
   m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &8622905515404339745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6953879107609035510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f32f68d665078c04786f43d79d1f8bcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inRoom: 0
 --- !u!1 &7234582953064962595
 GameObject:
   m_ObjectHideFlags: 0
