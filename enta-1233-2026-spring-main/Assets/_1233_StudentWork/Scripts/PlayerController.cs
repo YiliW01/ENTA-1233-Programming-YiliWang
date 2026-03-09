@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 [RequireComponent(typeof(CharacterController))]
 
@@ -29,10 +30,31 @@ public class PlayerController : MonoBehaviour
 
     private static readonly int Speed =
         Animator.StringToHash("Speed");
+
+    [SerializeField] private Health _health;
         
     private void Awake()
     {
-        _characterController = GetComponent<CharacterController>();
+        if (_characterController == null) _characterController = GetComponent<CharacterController>();
+        if (_health == null) _health = GetComponent<Health>();
+    }
+
+    private void OnEnable()
+    {
+        if (_health != null)
+        {
+            _health.OnDamaged += HandleDamaged;
+            _health.OnDied += HandleDied;
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (_health != null)
+        {
+            _health.OnDamaged -= HandleDamaged;
+            _health.OnDied -= HandleDied;
+        }
     }
 
     private void Update()
@@ -115,7 +137,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    private System.Collections.IEnumerator WaitForLanding()
+    private IEnumerator WaitForLanding()
     {
         yield return new WaitUntil(() => !IsGrounded());               
         yield return new WaitUntil(IsGrounded);
@@ -135,4 +157,30 @@ public class PlayerController : MonoBehaviour
     }
 
     private bool IsGrounded() => _characterController.isGrounded;
+
+    private void HandleDamaged(DamageInfo info)
+    {
+        Debug.Log(
+            $"[Character] Hit by " +
+            $"{info.Source?.name ?? "Unknown"} " +
+            $"for {info.Amount} damage. " +
+            $"HP: {_health.CurrentHealth}/{_health.MaxHealth}");
+        _animator?.SetTrigger("Hit");
+    }
+
+    private void HandleDied()
+    {
+        Debug.Log("[Character] Died! Gameover...");
+        _animator?.SetTrigger("Die");
+        _characterController = null;
+
+        StartCoroutine(GameOverTransition());
+    }
+
+    private IEnumerator GameOverTransition()
+    {
+        yield return new WaitForSeconds(2f);
+
+        GameMgr.Instance.GameOver();
+    }
 }

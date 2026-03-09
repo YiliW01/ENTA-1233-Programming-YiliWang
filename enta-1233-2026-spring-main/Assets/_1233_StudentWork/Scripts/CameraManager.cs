@@ -5,10 +5,7 @@ public class CameraManager : Singleton<CameraManager>
 {
     [SerializeField] private CinemachineCamera[] _cam;
     
-    public CollisionHandler[] _camRoom;
-
-    //idk what this was for i lost the thought
-    //private int roomNumber = 0;
+    [SerializeField] CollisionHandler[] _camRoom;
 
     public void ChangeRoomCamera()
     {
@@ -17,12 +14,12 @@ public class CameraManager : Singleton<CameraManager>
 
         if (_camRoom[0].inRoom == true)
         {
-            _cam[0].Priority = 20;
+            _cam[0].Priority = 11;
         }
 
         if (_camRoom[1].inRoom == true)
         {
-            _cam[1].Priority = 20;
+            _cam[1].Priority = 11;
         }
 
     }
