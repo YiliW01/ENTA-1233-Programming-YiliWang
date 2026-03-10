@@ -3,9 +3,14 @@ using UnityEngine;
 public class PlayerActionHandler : MonoBehaviour
 {
     [SerializeField] private PlayerController _controller;
+
+    [SerializeField] private Vector3 _fixedAxis = Vector3.forward;
+
     public void Attack()
     {
         Debug.Log("IS ATTACKING");
+        _controller.Weapon.Fire(transform.TransformDirection(_fixedAxis),
+                        true);
     }
 
     public void Jump()
@@ -16,5 +21,10 @@ public class PlayerActionHandler : MonoBehaviour
         _controller._numberOfJumps++;
         _controller._velocity = _controller.jumpPower;
         //_velocity = jumpPower / _numberOfJumps;
+    }
+
+    public void DieGameOver()
+    {
+        GameMgr.Instance.GameOver();
     }
 }

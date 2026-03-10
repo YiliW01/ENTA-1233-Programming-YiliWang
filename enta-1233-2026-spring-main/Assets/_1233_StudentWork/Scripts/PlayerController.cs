@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     private Vector2 _input;
     private CharacterController _characterController;
-    private Vector3 _direction;
+    public Vector3 _direction;
         
     [SerializeField] private float smoothTime = 0.05f;
     private float _currentVelocity;
@@ -32,6 +32,8 @@ public class PlayerController : MonoBehaviour
         Animator.StringToHash("Speed");
 
     [SerializeField] private Health _health;
+
+    public ProjectileWeapon Weapon;
         
     private void Awake()
     {
@@ -63,15 +65,16 @@ public class PlayerController : MonoBehaviour
         ApplyRotation();
         ApplyMovement();
               
-        if (!IsGrounded())
-        {
-            _animator.SetBool("IsFalling", true);
-            _animator.SetBool("IsLanded", false);
-        }
-        else
+        if (IsGrounded())
         {
             _animator.SetBool("IsFalling", false);
             _animator.SetBool("IsLanded", true);
+        }
+
+        else
+        {
+            _animator.SetBool("IsFalling", true);
+            _animator.SetBool("IsLanded", false);
         }
 
         AnimationParameters();
@@ -114,16 +117,16 @@ public class PlayerController : MonoBehaviour
     public void Jump(InputAction.CallbackContext context)
     {
         if (!context.started) return;
-        //if (!IsGrounded() && _numberOfJumps >= maxNumberOfJumps) return;
-        //if (_numberOfJumps == 0) StartCoroutine(WaitForLanding());
+        if (!IsGrounded() && _numberOfJumps >= maxNumberOfJumps) return;
+        if (_numberOfJumps == 0) StartCoroutine(WaitForLanding());
 
         if (isJumping == true)
         {
             _animator.SetBool("IsJump2", true);
         }
 
-        //_numberOfJumps++;
-        //_velocity = jumpPower;
+        _numberOfJumps++;
+        _velocity = jumpPower;
         //_velocity = jumpPower / _numberOfJumps;
 
         _animator.SetBool("IsJumping", true);
@@ -180,14 +183,5 @@ public class PlayerController : MonoBehaviour
         Debug.Log("[Character] Died! Gameover...");
         _animator?.SetTrigger("Die");
         _characterController = null;
-
-        StartCoroutine(GameOverTransition());
-    }
-
-    private IEnumerator GameOverTransition()
-    {
-        yield return new WaitForSeconds(2f);
-
-        GameMgr.Instance.GameOver();
     }
 }
