@@ -17,11 +17,11 @@ public class PlayerController : MonoBehaviour
 
     private float _gravity = -9.81f;
     [SerializeField] private float gravityMultiplier = 3.0f;
-    private float _velocity;
+    public float _velocity;
 
-    [SerializeField] private float jumpPower;
-    private int _numberOfJumps;
-    [SerializeField] private int maxNumberOfJumps = 1;
+    [SerializeField] public float jumpPower;
+    public int _numberOfJumps;
+    [SerializeField] public int maxNumberOfJumps = 1;
 
     [SerializeField]
     private Animator _animator;
@@ -114,16 +114,16 @@ public class PlayerController : MonoBehaviour
     public void Jump(InputAction.CallbackContext context)
     {
         if (!context.started) return;
-        if (!IsGrounded() && _numberOfJumps >= maxNumberOfJumps) return;
-        if (_numberOfJumps == 0) StartCoroutine(WaitForLanding());
+        //if (!IsGrounded() && _numberOfJumps >= maxNumberOfJumps) return;
+        //if (_numberOfJumps == 0) StartCoroutine(WaitForLanding());
 
         if (isJumping == true)
         {
             _animator.SetBool("IsJump2", true);
         }
 
-        _numberOfJumps++;
-        _velocity = jumpPower;
+        //_numberOfJumps++;
+        //_velocity = jumpPower;
         //_velocity = jumpPower / _numberOfJumps;
 
         _animator.SetBool("IsJumping", true);
@@ -136,8 +136,15 @@ public class PlayerController : MonoBehaviour
         print("Testing 1, 2, 3...");
     }
 
+    public void Attack(InputAction.CallbackContext context)
+    {
+        if (!context.started) return;
+        Debug.Log($"Pressing attack button!");
+        _animator?.SetTrigger("Attack");
+    }
 
-    private IEnumerator WaitForLanding()
+
+    public IEnumerator WaitForLanding()
     {
         yield return new WaitUntil(() => !IsGrounded());               
         yield return new WaitUntil(IsGrounded);
@@ -156,7 +163,7 @@ public class PlayerController : MonoBehaviour
             Speed, _input.sqrMagnitude);
     }
 
-    private bool IsGrounded() => _characterController.isGrounded;
+    public bool IsGrounded() => _characterController.isGrounded;
 
     private void HandleDamaged(DamageInfo info)
     {
