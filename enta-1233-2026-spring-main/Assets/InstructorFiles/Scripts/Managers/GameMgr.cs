@@ -80,6 +80,12 @@ public class GameMgr : Singleton<GameMgr>
         throw new NotImplementedException("No next level logic");
     }
 
+    public void GameComplete()
+    {
+        IsGameRunning = false;
+        SceneMgr.Instance.LoadScene(GameScenes.GameOver, GameMenus.GameCompleteMenu);
+    }
+
     /// <summary>
     /// Toggle the game state
     /// </summary>

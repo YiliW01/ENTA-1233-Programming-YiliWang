@@ -11,6 +11,7 @@ public class CameraManager : Singleton<CameraManager>
     {
         _cam[0].Priority = 10;
         _cam[1].Priority = 10;
+        _cam[2].Priority = 10;
 
         if (_camRoom[0].inRoom == true)
         {
@@ -20,6 +21,11 @@ public class CameraManager : Singleton<CameraManager>
         if (_camRoom[1].inRoom == true)
         {
             _cam[1].Priority = 11;
+        }
+
+        if (_camRoom[2].inRoom == true)
+        {
+            _cam[2].Priority = 11;
         }
 
     }

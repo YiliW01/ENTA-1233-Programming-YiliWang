@@ -44,7 +44,7 @@ public class SpikeBrain : MonoBehaviour
     private void HandleDamaged(DamageInfo info)
     {
         Debug.Log(
-            $"[Bloom] Hit by " +
+            $"[Spike] Hit by " +
             $"{info.Source?.name ?? "Unknown"} " +
             $"for {info.Amount} damage. " +
             $"HP: {_health.CurrentHealth}/{_health.MaxHealth}");

@@ -12,6 +12,7 @@ public class EnemyAnimatorDriver : MonoBehaviour
     private static readonly int AttackTriggerHash = Animator.StringToHash("Attack");
     private static readonly int HitTriggerHash = Animator.StringToHash("Hit");
     private static readonly int DieTriggerHash = Animator.StringToHash("Die");
+    private static readonly int SpawnTriggerHash = Animator.StringToHash("Spawn");
     [SerializeField] private Animator _animator;
 
 
@@ -19,6 +20,11 @@ public class EnemyAnimatorDriver : MonoBehaviour
     {
         if (_animator == null)
             _animator = GetComponentInChildren<Animator>();
+    }
+
+    public void TriggerSpawn()
+    {
+        _animator.SetTrigger(SpawnTriggerHash);
     }
 
     public void SetSpeed(float speed)

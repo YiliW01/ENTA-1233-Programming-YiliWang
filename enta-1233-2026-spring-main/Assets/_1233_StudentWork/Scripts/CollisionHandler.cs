@@ -6,12 +6,19 @@ public class CollisionHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        inRoom = true;
+        if (other.CompareTag("Player"))
+        {
+            inRoom = true;
+        }
+        
     }
 
     private void OnTriggerExit(Collider other)
     {
-        inRoom = false;
-        CameraManager.Instance.ChangeRoomCamera();
+        if (other.CompareTag("Player"))
+        {
+            inRoom = false;
+            CameraManager.Instance.ChangeRoomCamera();
+        }
     }
 }

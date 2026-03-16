@@ -66,14 +66,6 @@ public class SnakeBrain : MonoBehaviour
 
     private void HandleDied()
     {
-        _stateMachine.ChangeState(null);
-        if (Mover != null)
-        {
-            Mover.Stop();
-            Mover.SetEnabled(false);
-        }
-
-        _animatorDriver.TriggerDie();
-        enabled = false;
+        _stateMachine.ChangeState(new SnakeDeathState(this, _stateMachine));
     }
 }

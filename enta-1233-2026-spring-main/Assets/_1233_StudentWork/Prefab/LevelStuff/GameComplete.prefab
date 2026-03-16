@@ -140,9 +140,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1823020591436540214}
   - component: {fileID: 8370154509526223705}
-  - component: {fileID: 1377508871761554377}
+  - component: {fileID: 2653216564581619308}
   m_Layer: 6
-  m_Name: Win
+  m_Name: GameComplete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -156,7 +156,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8635158177423518773}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.57, y: 37.02, z: -59.8}
   m_LocalScale: {x: 1.597, y: 1, z: 1.4957}
   m_ConstrainProportionsScale: 0
@@ -185,7 +185,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1377508871761554377
+--- !u!114 &2653216564581619308
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -194,6 +194,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8635158177423518773}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62f8c742e4c7cdd41b758c64c197a2bc, type: 3}
+  m_Script: {fileID: 11500000, guid: 13c07e628be98a44fa9ce10766381b61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

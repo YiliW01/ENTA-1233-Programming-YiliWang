@@ -38,6 +38,7 @@ public class BloomBrain : MonoBehaviour
 
     private void Start()
     {
+        _animatorDriver.TriggerSpawn();
         _stateMachine.Initialize(new BloomMoveState(this, _stateMachine));
     }
 
@@ -65,14 +66,6 @@ public class BloomBrain : MonoBehaviour
 
     private void HandleDied()
     {
-        _stateMachine.ChangeState(null);
-        if (Mover != null)
-        {
-            Mover.Stop();
-            Mover.SetEnabled(false);
-        }
-
-        _animatorDriver.TriggerDie();
-        enabled = false;
+        _stateMachine.ChangeState(new BloomDeathState(this, _stateMachine));    
     }
 }
