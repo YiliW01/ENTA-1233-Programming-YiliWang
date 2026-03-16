@@ -8,7 +8,7 @@ public class SpikeBrain : MonoBehaviour
     [SerializeField] private Health _health;
     [SerializeField] private PatrolMotor _patrolMotor;
     [SerializeField] private ContactDamage _contactDamage;
-    [SerializeField] private EnemyAnimatorDriver _animatiorDriver;
+    [SerializeField] private EnemyAnimatorDriver _animatorDriver;
 
     private IMover _mover;
 
@@ -17,7 +17,7 @@ public class SpikeBrain : MonoBehaviour
         if (_health == null) _health = GetComponent<Health>();
         if (_patrolMotor == null) _patrolMotor = GetComponent<PatrolMotor>();
         if (_contactDamage == null) _contactDamage = GetComponent<ContactDamage>();
-        if (_animatiorDriver == null) _animatiorDriver = GetComponent<EnemyAnimatorDriver>();
+        if (_animatorDriver == null) _animatorDriver = GetComponent<EnemyAnimatorDriver>();
         _mover = GetComponent<IMover>();
     }
 
@@ -26,17 +26,29 @@ public class SpikeBrain : MonoBehaviour
         if (_health != null && _health.IsDead) return;
 
         // Update animator based on mover velocity
-        if (_animatiorDriver != null && _mover != null) _animatiorDriver.SetSpeed(_mover.Velocity.magnitude);
+        if (_animatorDriver != null && _mover != null) _animatorDriver.SetSpeed(_mover.Velocity.magnitude);
     }
 
     private void OnEnable()
     {
         if (_health != null) _health.OnDied += HandleDied;
+        if (_health != null) _health.OnDamaged += HandleDamaged;
     }
 
     private void OnDisable()
     {
         if (_health != null) _health.OnDied -= HandleDied;
+        if (_health != null) _health.OnDamaged -= HandleDamaged;
+    }
+
+    private void HandleDamaged(DamageInfo info)
+    {
+        Debug.Log(
+            $"[Bloom] Hit by " +
+            $"{info.Source?.name ?? "Unknown"} " +
+            $"for {info.Amount} damage. " +
+            $"HP: {_health.CurrentHealth}/{_health.MaxHealth}");
+        _animatorDriver?.TriggerHit();
     }
 
     private void HandleDied()
@@ -49,6 +61,7 @@ public class SpikeBrain : MonoBehaviour
             _mover.SetEnabled(false);
         }
 
-        if (_animatiorDriver != null) _animatiorDriver.TriggerDie();
+        if (_animatorDriver != null) _animatorDriver.TriggerDie();
+        enabled = false;
     }
 }

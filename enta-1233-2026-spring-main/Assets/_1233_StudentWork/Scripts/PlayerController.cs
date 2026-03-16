@@ -142,7 +142,7 @@ public class PlayerController : MonoBehaviour
     public void Attack(InputAction.CallbackContext context)
     {
         if (!context.started) return;
-        Debug.Log($"Pressing attack button!");
+        //Debug.Log($"Pressing attack button!");
         _animator?.SetTrigger("Attack");
     }
 

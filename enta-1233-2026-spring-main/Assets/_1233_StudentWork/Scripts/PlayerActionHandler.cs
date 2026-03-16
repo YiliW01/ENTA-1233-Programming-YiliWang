@@ -8,7 +8,7 @@ public class PlayerActionHandler : MonoBehaviour
 
     public void Attack()
     {
-        Debug.Log("IS ATTACKING");
+        //Debug.Log("IS ATTACKING");
         _controller.Weapon.Fire(transform.TransformDirection(_fixedAxis),
                         true);
     }

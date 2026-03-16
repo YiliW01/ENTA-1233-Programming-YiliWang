@@ -11,6 +11,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float _speed = 20f;
     [SerializeField] private float _lifetime = 5f;
     [SerializeField] private bool _useGravity;
+    [SerializeField] private bool _deleteOnImpact = true;
 
     private Rigidbody _rb;
     private GameObject _source;
@@ -41,7 +42,25 @@ public class Projectile : MonoBehaviour
         }
 
         // Destroy on impact
-        Destroy(gameObject);
+        if (_deleteOnImpact == true) Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject == _source) return;
+
+        var damageReceiver = other.gameObject.GetComponent<IDamageReceiver>();
+        if (damageReceiver != null)
+        {
+            var info = new DamageInfo
+            {
+                Amount = _damage,
+                Source = _source,
+                HitPoint = other.transform.position,
+                HitNormal = Vector3.up
+            };
+            damageReceiver.ApplyDamage(info);
+        }
     }
 
     public void Launch(Vector3 direction, GameObject source)
