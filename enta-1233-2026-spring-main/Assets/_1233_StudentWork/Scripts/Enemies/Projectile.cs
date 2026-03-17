@@ -13,6 +13,13 @@ public class Projectile : MonoBehaviour
     [SerializeField] private bool _useGravity;
     [SerializeField] private bool _deleteOnImpact = true;
 
+    [SerializeField] private GameObject _impactVfxPrefab;
+
+    void SpawnImpact(Vector3 position)
+    {
+        Instantiate(_impactVfxPrefab, position, Quaternion.identity);
+    }
+
     private Rigidbody _rb;
     private GameObject _source;
 
@@ -41,6 +48,7 @@ public class Projectile : MonoBehaviour
             damageReceiver.ApplyDamage(info);
         }
 
+        SpawnImpact(collision.contacts[0].point);
         // Destroy on impact
         if (_deleteOnImpact == true) Destroy(gameObject);
     }

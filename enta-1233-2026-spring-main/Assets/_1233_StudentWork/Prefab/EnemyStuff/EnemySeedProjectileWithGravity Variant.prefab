@@ -82,6 +82,10 @@ PrefabInstance:
       propertyPath: _deleteOnImpact
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 644950102788810033, guid: 76c449a8506ac5c41a8c8ef48d62b6be, type: 3}
+      propertyPath: _impactVfxPrefab
+      value: 
+      objectReference: {fileID: 1804575524108633419, guid: 6b09633c8f68ecb48a491c77e9ca1fd4, type: 3}
     - target: {fileID: 1099951981790617499, guid: 76c449a8506ac5c41a8c8ef48d62b6be, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.9353108
