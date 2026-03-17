@@ -2942,14 +2942,6 @@ PrefabInstance:
       propertyPath: '_patrolPoints.Array.data[2]'
       value: 
       objectReference: {fileID: 654677293}
-    - target: {fileID: 1785489378860935434, guid: edaa3f2c5c40deb46a93c5a32672765a, type: 3}
-      propertyPath: m_ExcludeLayers.m_Bits
-      value: 320
-      objectReference: {fileID: 0}
-    - target: {fileID: 4605068135648242610, guid: edaa3f2c5c40deb46a93c5a32672765a, type: 3}
-      propertyPath: _maxHealth
-      value: 200
-      objectReference: {fileID: 0}
     - target: {fileID: 8079041902616696166, guid: edaa3f2c5c40deb46a93c5a32672765a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 19.68
@@ -3007,10 +2999,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3383804989883699758, guid: e279e3297d199604f96c316603bcad21, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4080921268401290247, guid: e279e3297d199604f96c316603bcad21, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.09
@@ -3051,33 +3039,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4320403677984959167, guid: e279e3297d199604f96c316603bcad21, type: 3}
-      propertyPath: _isInvulnerable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4641330073816402987, guid: e279e3297d199604f96c316603bcad21, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 10.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 4641330073816402987, guid: e279e3297d199604f96c316603bcad21, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9961947
-      objectReference: {fileID: 0}
-    - target: {fileID: 4641330073816402987, guid: e279e3297d199604f96c316603bcad21, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.08715578
-      objectReference: {fileID: 0}
     - target: {fileID: 6953879107609035510, guid: e279e3297d199604f96c316603bcad21, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8551222278247136458, guid: e279e3297d199604f96c316603bcad21, type: 3}
-      propertyPath: m_Height
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8551222278247136458, guid: e279e3297d199604f96c316603bcad21, type: 3}
-      propertyPath: m_Radius
-      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
