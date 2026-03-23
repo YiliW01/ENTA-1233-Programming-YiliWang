@@ -34,6 +34,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Health _health;
 
     public ProjectileWeapon Weapon;
+    [SerializeField] private GameObject _bombPrefab;
+    [SerializeField] private Transform _muzzle;
         
     private void Awake()
     {
@@ -136,7 +138,10 @@ public class PlayerController : MonoBehaviour
 
     public void Testing(InputAction.CallbackContext context)
     {
-        print("Testing 1, 2, 3...");
+        if (!context.started) return;
+        Debug.Log($"Testing 1, 2, 3,");
+        Debug.Log($"Bombs away");
+        Instantiate(_bombPrefab, _muzzle.position, Quaternion.identity);
     }
 
     public void Attack(InputAction.CallbackContext context)
