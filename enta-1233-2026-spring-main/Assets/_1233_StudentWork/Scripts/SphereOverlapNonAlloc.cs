@@ -9,7 +9,7 @@ public class SphereOverlapNonAlloc : MonoBehaviour
 
     [SerializeField] private UnityEvent<Collider> _onColliderDetected;
 
-    private Collider[] _results;
+    public Collider[] _results;
 
     private void Awake()
     {
