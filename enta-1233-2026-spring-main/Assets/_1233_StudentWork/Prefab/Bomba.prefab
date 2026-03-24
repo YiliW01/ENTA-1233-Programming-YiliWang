@@ -5144,6 +5144,7 @@ GameObject:
   - component: {fileID: 4238428327504672156}
   - component: {fileID: 3712804634172585950}
   - component: {fileID: 2367185319263328067}
+  - component: {fileID: 3613146176968871072}
   m_Layer: 0
   m_Name: Bomba
   m_TagString: Untagged
@@ -5267,7 +5268,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2367185319263328067}
+      - m_Target: {fileID: 3613146176968871072}
         m_TargetAssemblyTypeName: ExplosionApplyForceRB, Assembly-CSharp
         m_MethodName: Push
         m_Mode: 0
@@ -5314,7 +5315,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7131101664826199448}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3dcd5ec09849f34e80a640861d48703, type: 3}
   m_Name: 
@@ -5335,6 +5336,20 @@ MonoBehaviour:
   _damage: 100
   _source: {fileID: 7131101664826199448}
 --- !u!114 &2367185319263328067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7131101664826199448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a15a4e2f157d0b4c8eb890f44a57cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _source: {fileID: 7131101664826199448}
+  _forceMult: 500
+--- !u!114 &3613146176968871072
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
