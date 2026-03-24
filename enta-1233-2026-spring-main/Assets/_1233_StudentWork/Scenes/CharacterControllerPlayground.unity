@@ -12011,17 +12011,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1476639683 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4078483030219045029, guid: e279e3297d199604f96c316603bcad21, type: 3}
-  m_PrefabInstance: {fileID: 1213026216777268165}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95cda0bd8987a80418af7ef7e683f819, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1529109457
 GameObject:
   m_ObjectHideFlags: 0
@@ -17809,11 +17798,6 @@ Transform:
   - {fileID: 2032854023}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1954904833 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4146827774049597495, guid: e279e3297d199604f96c316603bcad21, type: 3}
-  m_PrefabInstance: {fileID: 1213026216777268165}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1963921680
 GameObject:
   m_ObjectHideFlags: 0
@@ -18314,38 +18298,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1786272054084916935, guid: e279e3297d199604f96c316603bcad21, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1786272054084916935, guid: e279e3297d199604f96c316603bcad21, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1786272054084916935, guid: e279e3297d199604f96c316603bcad21, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1476639683}
-    - target: {fileID: 1786272054084916935, guid: e279e3297d199604f96c316603bcad21, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Testing
-      objectReference: {fileID: 0}
-    - target: {fileID: 1786272054084916935, guid: e279e3297d199604f96c316603bcad21, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PlayerController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1786272054084916935, guid: e279e3297d199604f96c316603bcad21, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4078483030219045029, guid: e279e3297d199604f96c316603bcad21, type: 3}
-      propertyPath: _muzzle
-      value: 
-      objectReference: {fileID: 1954904833}
-    - target: {fileID: 4078483030219045029, guid: e279e3297d199604f96c316603bcad21, type: 3}
-      propertyPath: _bombPrefab
-      value: 
-      objectReference: {fileID: 7131101664826199448, guid: 18e5681df66dfb94cb17df437b0aa4d8, type: 3}
     - target: {fileID: 4080921268401290247, guid: e279e3297d199604f96c316603bcad21, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.09

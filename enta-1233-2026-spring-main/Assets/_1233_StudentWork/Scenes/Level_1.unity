@@ -316,13 +316,17 @@ PrefabInstance:
       propertyPath: m_LocalRotation.x
       value: 0.08715578
       objectReference: {fileID: 0}
+    - target: {fileID: 5143562448486581482, guid: e279e3297d199604f96c316603bcad21, type: 3}
+      propertyPath: m_ClearFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6953879107609035510, guid: e279e3297d199604f96c316603bcad21, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6953879107609035510, guid: e279e3297d199604f96c316603bcad21, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

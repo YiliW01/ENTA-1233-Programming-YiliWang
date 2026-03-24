@@ -13,7 +13,7 @@ public class Health : MonoBehaviour
     public int CurrentHealth { get; private set; }
 
     public int MaxHealth => _maxHealth;
-
+    public float NormalizedHealth => _maxHealth <= 0 ? 0f : (float)CurrentHealth / _maxHealth;
     public bool IsDead { get; private set; }
 
 
@@ -29,13 +29,14 @@ public class Health : MonoBehaviour
     public event Action OnDied;
     public event Action OnHealed;
     public event Action OnReset;
-
+    public event Action<Health> OnHealthChanged;
 
     public void ResetHealth()
     {
         CurrentHealth = _maxHealth;
         IsDead = false;
         OnReset?.Invoke();
+        OnHealthChanged?.Invoke(this);
     }
 
 
@@ -47,6 +48,7 @@ public class Health : MonoBehaviour
         CurrentHealth = Mathf.Clamp(CurrentHealth, 0, _maxHealth);
 
         OnDamaged?.Invoke(info);
+        OnHealthChanged?.Invoke(this);
 
         if (CurrentHealth <= 0) Die();
 
@@ -60,6 +62,7 @@ public class Health : MonoBehaviour
         CurrentHealth += amount;
         CurrentHealth = Mathf.Clamp(CurrentHealth, 0, _maxHealth);
         OnHealed.Invoke();
+        OnHealthChanged?.Invoke(this);
     }
 
 

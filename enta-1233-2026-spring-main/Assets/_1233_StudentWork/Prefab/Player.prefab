@@ -552,6 +552,8 @@ MonoBehaviour:
   _animator: {fileID: 988522408634787882}
   _health: {fileID: 4320403677984959167}
   Weapon: {fileID: 1758193366146842509}
+  _bombPrefab: {fileID: 7131101664826199448, guid: 18e5681df66dfb94cb17df437b0aa4d8, type: 3}
+  _muzzle: {fileID: 4146827774049597495}
 --- !u!114 &1786272054084916935
 MonoBehaviour:
   m_ObjectHideFlags: 0
