@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1969443906811449268}
   - component: {fileID: 2381653663408008411}
   - component: {fileID: 7124533475279089302}
+  - component: {fileID: 1527283182411643271}
   m_Layer: 0
   m_Name: LevelSelectEntry
   m_TagString: Untagged
@@ -37,7 +38,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -30, y: 35}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 400, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1969443906811449268
 CanvasRenderer:
@@ -120,7 +121,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2381653663408008411}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1527283182411643271}
+        m_TargetAssemblyTypeName: LevelSelectEntryUI, Assembly-CSharp
+        m_MethodName: ButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1527283182411643271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500424032914317414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e32557e9e729ed24d8e5db08867227a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _titleText: {fileID: 2282651971264517178}
 --- !u!1 &3836798882593683885
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +159,7 @@ GameObject:
   - component: {fileID: 6104612297101027844}
   - component: {fileID: 2282651971264517178}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: TitleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

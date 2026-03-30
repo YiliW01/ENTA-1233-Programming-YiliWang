@@ -127,6 +127,7 @@ MonoBehaviour:
   _gameOverMenuPrefab: {fileID: 4633760019947690283, guid: d566c6d6cd9636740aa1638fca58d5c9, type: 3}
   _levelCompleteMenuPrefab: {fileID: 374465803062858336, guid: 58c2c8ddbd85f79488bda083a7d1f192, type: 3}
   _gameCompleteMenuPrefab: {fileID: 1451848085830437302, guid: 7dd6cc0d738ae4f41924058aabedd971, type: 3}
+  _levelSelectMenuPrefab: {fileID: 6270062579072540083, guid: bc89846d80af6ea45af1454d0dc3390a, type: 3}
 --- !u!1001 &5911991904489727633
 PrefabInstance:
   m_ObjectHideFlags: 0

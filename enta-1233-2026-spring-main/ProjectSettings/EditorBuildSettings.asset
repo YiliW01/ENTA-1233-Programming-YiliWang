@@ -23,6 +23,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_1233_StudentWork/Scenes/Level_2.unity
     guid: c17b342653c5a5742b3486a20f589e71
+  - enabled: 1
+    path: Assets/_1233_StudentWork/Scenes/Level_3.unity
+    guid: 4dd4029c6982b3a4fa24df26847c2328
+  - enabled: 1
+    path: Assets/_1233_StudentWork/Scenes/Level_4.unity
+    guid: 3102ff3d8232ac3428d56eab09248159
+  - enabled: 1
+    path: Assets/_1233_StudentWork/Scenes/Level_5.unity
+    guid: cb6196cfd120df44aa917724458d1421
+  - enabled: 1
+    path: Assets/_1233_StudentWork/Scenes/Level_6.unity
+    guid: 188e19b7c48fca849ab11c19a0cc0f92
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: e35652714392b1442851c8d44a40fbc8, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2dfd1182a5078214e8c1886d06b12dd4, type: 3}

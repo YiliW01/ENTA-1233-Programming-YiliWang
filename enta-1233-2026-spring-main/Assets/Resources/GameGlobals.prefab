@@ -166,18 +166,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelMgr
       objectReference: {fileID: 0}
-    - target: {fileID: 9030437331059529696, guid: 56b731f46e3d5d04daea82322a52a34b, type: 3}
-      propertyPath: _levelSceneNames.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9030437331059529696, guid: 56b731f46e3d5d04daea82322a52a34b, type: 3}
-      propertyPath: '_levelSceneNames.Array.data[0]'
-      value: Level_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9030437331059529696, guid: 56b731f46e3d5d04daea82322a52a34b, type: 3}
-      propertyPath: '_levelSceneNames.Array.data[1]'
-      value: Level_2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
