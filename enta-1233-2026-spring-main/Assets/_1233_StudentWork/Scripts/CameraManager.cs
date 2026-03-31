@@ -3,11 +3,16 @@ using Unity.Cinemachine;
 
 public class CameraManager : Singleton<CameraManager>
 {
-    public CinemachineCamera _activeCamera;
-
     [SerializeField] private CinemachineCamera[] _cam;
     
     [SerializeField] CollisionHandler[] _camRoom;
+
+    public CinemachineCamera _activeCamera;
+
+    private void Start()
+    {
+        _activeCamera = _cam[0];
+    }
 
     public void ChangeRoomCamera()
     {
