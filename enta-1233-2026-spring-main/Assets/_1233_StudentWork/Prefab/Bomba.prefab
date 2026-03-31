@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6096550382624656468}
   - component: {fileID: 8348717219037497262}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AudioSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 5677512794373050311}
   - component: {fileID: 1366768208959525388}
   - component: {fileID: 5447947125009524936}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 2176461060096078866}
   - component: {fileID: 3193883763331893567}
   - component: {fileID: 7169650499608367357}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ParticleSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5145,7 +5145,7 @@ GameObject:
   - component: {fileID: 3712804634172585950}
   - component: {fileID: 2367185319263328067}
   - component: {fileID: 3613146176968871072}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bomba
   m_TagString: Untagged
   m_Icon: {fileID: 0}

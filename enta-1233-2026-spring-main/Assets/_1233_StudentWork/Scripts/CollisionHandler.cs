@@ -4,6 +4,8 @@ public class CollisionHandler : MonoBehaviour
 {
     public bool inRoom;
 
+    [SerializeField] private CameraManager _cameraManager;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -18,7 +20,7 @@ public class CollisionHandler : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             inRoom = false;
-            CameraManager.Instance.ChangeRoomCamera();
+            _cameraManager.ChangeRoomCamera();
         }
     }
 }
