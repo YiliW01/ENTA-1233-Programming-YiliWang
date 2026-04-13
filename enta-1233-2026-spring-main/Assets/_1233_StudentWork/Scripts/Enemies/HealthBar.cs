@@ -13,6 +13,7 @@ public class HealthBar : MonoBehaviour
     private void Start()
     {
         _enemyHealth.OnHealthChanged += RefreshHealthBar;
+        if (_enemyHealth != null) _enemyHealth.OnDied += DisableBar;
         RefreshHealthBar(_enemyHealth);
     }
 
@@ -37,5 +38,10 @@ public class HealthBar : MonoBehaviour
     {
         if (_healthFillImage == null) return;
         _healthFillImage.fillAmount = health != null ? health.NormalizedHealth : 0f;
+    }
+
+    private void DisableBar()
+    {
+        Destroy(gameObject);
     }
 }

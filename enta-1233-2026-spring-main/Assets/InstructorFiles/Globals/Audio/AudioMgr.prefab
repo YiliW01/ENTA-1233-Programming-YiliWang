@@ -180,11 +180,11 @@ MonoBehaviour:
   _musicSource: {fileID: 3889404973584460742}
   _sfxSource: {fileID: 7357499394245051889}
   _reusableMusicClips:
-  - {fileID: 8300000, guid: 7f2320ace16abab4c84c1af333eb3aff, type: 3}
+  - {fileID: 8300000, guid: dddc3cfdde6644e448d608b5e57c8d9c, type: 3}
   - {fileID: 8300000, guid: afe352af54f0df5408c960c072d6f9b6, type: 3}
   _reusableSoundClips:
-  - {fileID: 8300000, guid: 0954cae6f37d85d4b89c439913315a3b, type: 3}
-  - {fileID: 8300000, guid: 05e6d54ef1befd342a5f796306f1e0cb, type: 3}
+  - {fileID: 8300000, guid: 4268b6933e465e84bba5d11a44a1b325, type: 3}
+  - {fileID: 8300000, guid: f5d4d380d78cbef4abc8582c4c717c3f, type: 3}
   - {fileID: 8300000, guid: fd7320aa6dc1ad345ae2100c607937b0, type: 3}
 --- !u!1 &6765174810382904886
 GameObject:

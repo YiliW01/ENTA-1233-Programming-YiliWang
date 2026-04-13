@@ -5251,7 +5251,7 @@ MonoBehaviour:
   _radius: 5
   _layerMask:
     serializedVersion: 2
-    m_Bits: 640
+    m_Bits: 2688
   _maxHits: 32
   _onColliderDetected:
     m_PersistentCalls:

@@ -11,6 +11,8 @@ public class EnemySpawn : MonoBehaviour
 
     [SerializeField] private SpawnType _spawnMode = SpawnType.OnStart;
     [SerializeField] private GameObject _enemyPrefab;
+    [SerializeField] private GameObject _spawnPoint;
+    private bool _hasSpawned = false;
     
     private void Start()
     {
@@ -25,7 +27,7 @@ public class EnemySpawn : MonoBehaviour
         if (_spawnMode != SpawnType.OnTrigger) return;
         if (other.CompareTag("Player"))
         {
-            SpawnEnemy(transform.position, transform.rotation);
+            SpawnEnemy(_spawnPoint.transform.position, _spawnPoint.transform.rotation);
         }
     }
 
@@ -37,7 +39,12 @@ public class EnemySpawn : MonoBehaviour
 
     public void SpawnEnemy(Vector3 position, Quaternion rotation)
     {
-        Instantiate(_enemyPrefab, position, rotation);
-        Debug.Log($"{_enemyPrefab.name} spawned");
+        if (!_hasSpawned)
+        {
+            Instantiate(_enemyPrefab, position, rotation);
+            Debug.Log($"{_enemyPrefab.name} spawned");
+            _hasSpawned = true;
+        }
+        
     }
 }

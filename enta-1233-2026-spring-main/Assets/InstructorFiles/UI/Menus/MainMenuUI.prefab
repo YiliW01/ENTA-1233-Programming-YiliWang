@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: DRUID RUN
+  m_text: DRUID ADVENTURE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 82d919a11692921429ed85488311e96d, type: 2}
   m_sharedMaterial: {fileID: -4702586867860796732, guid: 82d919a11692921429ed85488311e96d, type: 2}

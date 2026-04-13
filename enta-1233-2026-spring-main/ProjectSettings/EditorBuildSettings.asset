@@ -26,13 +26,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_1233_StudentWork/Scenes/Level_3.unity
     guid: 4dd4029c6982b3a4fa24df26847c2328
-  - enabled: 1
+  - enabled: 0
     path: Assets/_1233_StudentWork/Scenes/Level_4.unity
     guid: 3102ff3d8232ac3428d56eab09248159
-  - enabled: 1
+  - enabled: 0
     path: Assets/_1233_StudentWork/Scenes/Level_5.unity
     guid: cb6196cfd120df44aa917724458d1421
-  - enabled: 1
+  - enabled: 0
     path: Assets/_1233_StudentWork/Scenes/Level_6.unity
     guid: 188e19b7c48fca849ab11c19a0cc0f92
   m_configObjects:
