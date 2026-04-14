@@ -13254,6 +13254,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 720287651}
+    - target: {fileID: 6318763428906366062, guid: 1c5299826a5054343ad6f6ed0a8277e3, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7593338080938356614, guid: 1c5299826a5054343ad6f6ed0a8277e3, type: 3}
       propertyPath: _enemyHealth
       value: 
