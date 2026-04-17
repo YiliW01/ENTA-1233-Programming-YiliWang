@@ -26,7 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_1233_StudentWork/Scenes/Level_3.unity
     guid: 4dd4029c6982b3a4fa24df26847c2328
-  - enabled: 0
+  - enabled: 1
     path: Assets/_1233_StudentWork/Scenes/Level_4.unity
     guid: 3102ff3d8232ac3428d56eab09248159
   - enabled: 0
